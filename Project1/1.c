@@ -1,3 +1,4 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
@@ -66,7 +67,7 @@ int main() {
 	scanf("%s",arr1);
 	//scanf在读取一长串带空格的字符串时只从第一个非空白字符开始到第一个空白字符结束
 	printf("%s\n", arr1);
-	printf("%s\n", "Hello World");
+	printf("%s\n", "hello world");
 	char arr2[10];
 	scanf("%5s", arr2);//%[n]s为最多读取n宽度个字符
 	printf("%.3s\n", arr2);//%.[m]s为最多输出m宽度个字符
@@ -74,5 +75,14 @@ int main() {
 	scanf("%d%*c%d%*c%d", &year, &month, &day);
 	//%*类型在读取后直接丢弃不存入变量，该方法的使用可避免因为输入格式问题导致的数据获取失败
 	printf("%d %d %d", year, month, day);
+
+	int js1 = 0, js2 = 0;
+	while (scanf("%d %d", &js1, &js2) != EOF) {
+		int js = js1 + js2;
+		printf("%d\n", js);
+	}
+	// EOF = end of file，是文件结束的标志，其返回值通常是-1
+	// 可用于多组输入时的连续读入，在vs中需要连续三次ctrl+z+enter来结束输入
 	return 0;
 }
+*/
