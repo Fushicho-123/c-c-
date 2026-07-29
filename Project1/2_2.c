@@ -89,6 +89,7 @@ int main(){
 			break;
 		default:
 			printf("请输入正确的游戏选项！\n");
+			break;
 		}
 	} while (input);
 	return 0;

@@ -1,7 +1,9 @@
-
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+
 int main(){
+
 	//if else 语句
 	int year = 0;
 	scanf("%d", &year);
@@ -88,5 +90,7 @@ next:
 	printf("%d = %d + %d\n", k, i, j);
 	//goto语句可以直接跳转到对应标记位置执行后续语句，
 	//在有多层循环时利用goto语句可以快速从内层循环跳出来
+
 	return 0;
 }
+*/

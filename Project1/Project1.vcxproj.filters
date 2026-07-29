@@ -24,5 +24,22 @@
     <ClCompile Include="2_2.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="3_2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="3_3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sub.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

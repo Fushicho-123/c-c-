@@ -3,7 +3,9 @@
 #include<stdio.h>
 #include<string.h>
 int cnt = 1;
+
 int main() {
+
 	//limits.h储存了整数类型的取值范围，float.h储存了浮点数类型的取值范围
 
 	size_t len;//size_t为无符号整数类型，作为sizeof的返回值类型
@@ -81,8 +83,13 @@ int main() {
 		int js = js1 + js2;
 		printf("%d\n", js);
 	}
+	// scanf的返回值为成功获取到的变量个数
 	// EOF = end of file，是文件结束的标志，其返回值通常是-1
 	// 可用于多组输入时的连续读入，在vs中需要连续三次ctrl+z+enter来结束输入
+
+	printf("%d ", printf("%d ", 12));
+	// printf的返回值为屏幕上打印的字符个数
+
 	return 0;
 }
 */
