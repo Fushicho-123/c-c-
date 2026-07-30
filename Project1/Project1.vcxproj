@@ -133,6 +133,7 @@
     <ClCompile Include="3.c" />
     <ClCompile Include="3_2.c" />
     <ClCompile Include="3_3.c" />
+    <ClCompile Include="4.c" />
     <ClCompile Include="sub.c" />
   </ItemGroup>
   <ItemGroup>
