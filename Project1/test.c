@@ -26,22 +26,21 @@ void menu_hard() {
 	printf("*--*--*--*--*--*--*--*\n");
 }
 void game() {
-	system("cls");
+	char bottom[110][110] = { '0' };
+	char top[110][110] = { '0' };
 	int xz = 0;
 	do {
-		system("cls");
-		char bottom[110][110] = { '0' };
-		char top[110][110] = { '0' };
 		menu_hard();
 		printf("请选择操作：");
 		scanf("%d", &xz);
+		CleanBur();
 		int oldtime = time(NULL);
 		switch (xz) {
 		case 1: {
 			InitArr(bottom, CJROW + 2, CJCOL + 2, '0');
 			SetLandMine(bottom, CJROW, CJCOL, CJNUM);
 			InitArr(top, CJROW + 2, CJCOL + 2, '*');
-			PrintArr(bottom, CJROW, CJCOL);
+			//PrintArr(bottom, CJROW, CJCOL);
 			PrintArr(top, CJROW, CJCOL);
 			int sz1 = 0, num = CJNUM;
 			int Mnum = CJNUM;
@@ -49,6 +48,7 @@ void game() {
 				menu_select();
 				printf("请选择操作：");
 				scanf("%d", &sz1);
+				CleanBur();
 				switch (sz1) {
 				case 1: {
 					int flag = Select1(top, bottom, CJROW, CJCOL);
@@ -87,6 +87,7 @@ void game() {
 					break;
 				}
 			} while (sz1);
+			xz = 0;
 			break;
 		}
 		case 2: {
@@ -101,6 +102,7 @@ void game() {
 				menu_select();
 				printf("请选择操作：");
 				scanf("%d", &sz1);
+				CleanBur();
 				switch (sz1) {
 				case 1: {
 					int flag = Select1(top, bottom, ZJROW, ZJCOL);
@@ -139,6 +141,7 @@ void game() {
 					break;
 				}
 			} while (sz1);
+			xz = 0;
 			break;
 		}
 		case 3: {
@@ -153,6 +156,7 @@ void game() {
 				menu_select();
 				printf("请选择操作：");
 				scanf("%d", &sz1);
+				CleanBur();
 				switch (sz1) {
 				case 1: {
 					int flag = Select1(top, bottom, GJROW, GJCOL);
@@ -191,6 +195,7 @@ void game() {
 					break;
 				}
 			} while (sz1);
+			xz = 0;
 			break;
 		}
 		case 4: {
@@ -208,6 +213,7 @@ void game() {
 				menu_select();
 				printf("请选择操作：");
 				scanf("%d", &sz1);
+				CleanBur();
 				switch (sz1) {
 				case 1: {
 					int flag = Select1(top, bottom, r, l);
@@ -247,24 +253,24 @@ void game() {
 					break;
 				}
 			} while (sz1);
+			xz = 0;
 			break;
 		}
 		default:
 			printf("无对应操作选项，请重新选择！\n");
 			break;
 		}
-
-	} while (xz);
+	}while (xz);
 }
 
 int main() {
 	srand((unsigned)time(NULL));
 	int sz = 0;
 	do {
-		system("cls");
 		menu();
 		printf("请选择操作：");
 		scanf("%d", &sz);
+		CleanBur();
 		switch (sz) {
 		case 1:
 			game();

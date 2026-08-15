@@ -117,6 +117,7 @@ int Select1(char top[][110], char bottom[][110], int r, int l) {
 	while (n) {
 		printf("请输入要排雷的坐标(行，列)：");
 		scanf("%d %d", &x, &y);
+		CleanBur();
 		if (x > 0 && y > 0 && x < r + 2 && y < l + 2) {
 			n = 0;
 			int flag = FindLandMine(top, bottom, x, y, r, l);
@@ -135,6 +136,7 @@ int Select2(char top[][110], char bottom[][110], int r, int l, int num, int mnum
 	while (n) {
 		printf("请输入要标记的位置(行，列)：");
 		scanf("%d %d", &x, &y);
+		CleanBur();
 		if (x<1 || x>r || y<1 || y>l) {
 			printf("标记位置不合法，请重新输入！\n");
 		}
@@ -154,17 +156,29 @@ int Select3(char top[][110], char bottom[][110], int r, int l,int num) {
 	while (n) {
 		printf("请输入要取消标记的位置(行，列)：");
 		scanf("%d %d", &x, &y);
-		if (x<1 || x>r || y<1 || y>l) {
-			printf("取消标记位置不合法，请重新输入！\n");
-		}
-		else if (top[x][y] != 'F') {
-			printf("该位置不是原有标记位置，请重新输入！\n");
+		CleanBur();
+		if (LimitSign(top, r, l) == 0) {
+			printf("请先标记！\n");
+			n = 0;
 		}
 		else {
-			num = CancelSign(top, bottom, x, y, r, l, num);
-			n = 0;
+			if (x<1 || x>r || y<1 || y>l) {
+				printf("取消标记位置不合法，请重新输入！\n");
+			}
+			else if (top[x][y] != 'F') {
+
+				printf("该位置不是原有标记位置，请重新输入！\n");
+			}
+			else {
+				num = CancelSign(top, bottom, x, y, r, l, num);
+				n = 0;
+			}
 		}
 	}
 	return num;
 }
 
+void CleanBur() {
+	int ch;
+	while ((ch = getchar()) != '\n' && ch != EOF);
+}
