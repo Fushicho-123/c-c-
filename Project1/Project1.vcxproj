@@ -134,9 +134,12 @@
     <ClCompile Include="3_2.c" />
     <ClCompile Include="3_3.c" />
     <ClCompile Include="4.c" />
+    <ClCompile Include="game.c" />
+    <ClCompile Include="test.c" />
     <ClCompile Include="sub.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="game.h" />
     <ClInclude Include="sub.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
