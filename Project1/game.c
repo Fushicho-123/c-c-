@@ -18,7 +18,6 @@ void SetLandMine(char bottom[][110], int r, int l, int num) {
 }
 
 void PrintArr(char arr[][110], int r, int l) {
-	system("cls");
 	for (int i = 0; i <= r; i++) {
 		printf("%2d ", i);
 		for (int j = 1; j <= l; j++) {

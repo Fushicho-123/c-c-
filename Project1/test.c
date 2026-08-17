@@ -1,3 +1,4 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -69,6 +70,7 @@ void game() {
 					if (num == 0) {
 						printf("非常棒，排雷成功，已排出所有雷点！\n");
 						printf("本局游戏所用时间(秒)：%d\n", newtime - oldtime);
+						sz1 = 0;
 					}
 					else {
 						printf("本局游戏已用时间(秒)：%d\n", newtime - oldtime);
@@ -123,6 +125,7 @@ void game() {
 					if (num == 0) {
 						printf("非常棒，排雷成功，已排出所有雷点！\n");
 						printf("本局游戏所用时间(秒)：%d\n", newtime - oldtime);
+						sz1 = 0;
 					}
 					else {
 						printf("本局游戏已用时间(秒)：%d\n", newtime - oldtime);
@@ -177,6 +180,7 @@ void game() {
 					if (num == 0) {
 						printf("非常棒，排雷成功，已排出所有雷点！\n");
 						printf("本局游戏所用时间(秒)：%d\n", newtime - oldtime);
+						sz1 = 0;
 					}
 					else {
 						printf("本局游戏已用时间(秒)：%d\n", newtime - oldtime);
@@ -235,6 +239,7 @@ void game() {
 					if (num == 0) {
 						printf("非常棒，排雷成功，已排出所有雷点！\n");
 						printf("本局游戏所用时间(秒)：%d\n", newtime - oldtime);
+						sz1 = 0;
 					}
 					else {
 						printf("本局游戏已用时间(秒)：%d\n", newtime - oldtime);
@@ -285,7 +290,7 @@ int main() {
 	} while (sz);
 	return 0;
 }
-
+*/
 //srand函数与rand函数的头文件是 stdlib.h，
 //time函数的头文件是 time.h
 //srand(参数);
