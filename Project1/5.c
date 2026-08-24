@@ -1,3 +1,4 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 int Sub(int x, int y) {
@@ -15,4 +16,4 @@ int main() {
 	}
 	return 0;
 }
-
+*/

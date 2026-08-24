@@ -206,6 +206,7 @@ void game() {
 			int r = 0, l = 0, n = 0;
 			printf("请输入要设置的雷盘大小(行，列)与雷的数量(颗)：");
 			scanf("%d %d %d", &r, &l, &n);
+			CleanBur();
 			InitArr(bottom, r + 2, l + 2, '0');
 			SetLandMine(bottom, r, l, n);
 			InitArr(top, r + 2, l + 2, '*');

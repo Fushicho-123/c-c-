@@ -4,11 +4,13 @@
 int add(int x, int y) {
 	int z = 0;
 	z = x + y;
+	z++;
+	//add(x, z);
 	return z;
 }
-
+int s = 0;
 int main(){
-	//研究函数栈帧，从底层理解函数创建与销毁的运行逻辑
+
 	int a = 10;
 	int b = 20;
 	int c = 0;
