@@ -51,6 +51,9 @@
     <ClCompile Include="6.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="6_2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sub.h">
