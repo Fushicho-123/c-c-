@@ -13,6 +13,7 @@ int Strlen(char* p) {
 }
 
 int main() {
+
 	// 取地址操作符&与解引用操作符*
 	int a = 10;
 	int* p1 = &a;
@@ -112,5 +113,4 @@ int main() {
 	
 	return 0;
 }
-	
 */

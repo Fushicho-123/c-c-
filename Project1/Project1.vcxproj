@@ -137,6 +137,8 @@
     <ClCompile Include="5.c" />
     <ClCompile Include="6.c" />
     <ClCompile Include="6_2.c" />
+    <ClCompile Include="6_3.c" />
+    <ClCompile Include="6_4.c" />
     <ClCompile Include="game.c" />
     <ClCompile Include="test.c" />
     <ClCompile Include="sub.c" />
