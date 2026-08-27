@@ -33,9 +33,6 @@
     <ClCompile Include="3_3.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="sub.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="4.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -60,12 +57,21 @@
     <ClCompile Include="6_4.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="jsq.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="clean.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="6_5.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sub.h">
+    <ClInclude Include="game.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="game.h">
+    <ClInclude Include="clean.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

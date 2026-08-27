@@ -176,8 +176,3 @@ int Select3(char top[][110], char bottom[][110], int r, int l,int num) {
 	}
 	return num;
 }
-
-void CleanBur() {
-	int ch;
-	while ((ch = getchar()) != '\n' && ch != EOF);
-}

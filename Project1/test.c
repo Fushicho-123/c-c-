@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "game.h"
+#include "clean.h"
 void menu() {
 	printf("*--*--*--*--*--*--*--*\n");
 	printf("*---- 1.©╙й╪сно╥ ----*\n");

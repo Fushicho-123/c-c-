@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -139,13 +139,15 @@
     <ClCompile Include="6_2.c" />
     <ClCompile Include="6_3.c" />
     <ClCompile Include="6_4.c" />
+    <ClCompile Include="6_5.c" />
+    <ClCompile Include="clean.c" />
     <ClCompile Include="game.c" />
+    <ClCompile Include="jsq.c" />
     <ClCompile Include="test.c" />
-    <ClCompile Include="sub.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clean.h" />
     <ClInclude Include="game.h" />
-    <ClInclude Include="sub.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
