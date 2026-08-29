@@ -29,8 +29,9 @@ int cal(int(*p)(int, int)) {
 	int z = p(x, y);
 	printf("计算结果是%d\n", z);
 }
-/*
+/*	
 int main() {
+	//	回调函数使用
 	int sz = 0;
 	do {
 		menu();
@@ -61,9 +62,10 @@ int main() {
 	return 0;
 }
 */
-/*
+/*	
 typedef int (*PF)(int, int);
 int main() {
+	//	函数指针数组使用
 	PF arr[5] = { NULL,add,sub,mul,div };
 	int sz = 0;
 	int x = 0, y = 0;
@@ -89,8 +91,9 @@ int main() {
 	return 0;
 }
 */
-/*
+/*	
 int main() {
+	//	直接函数调用
 	int sz = 0;
 	int x = 0, y = 0;
 	do {

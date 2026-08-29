@@ -140,6 +140,7 @@
     <ClCompile Include="6_3.c" />
     <ClCompile Include="6_4.c" />
     <ClCompile Include="6_5.c" />
+    <ClCompile Include="6_6.c" />
     <ClCompile Include="clean.c" />
     <ClCompile Include="game.c" />
     <ClCompile Include="jsq.c" />
