@@ -69,6 +69,9 @@
     <ClCompile Include="6_6.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="7.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
