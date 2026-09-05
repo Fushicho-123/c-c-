@@ -75,6 +75,9 @@
     <ClCompile Include="8.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="9.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
