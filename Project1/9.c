@@ -10,7 +10,15 @@ struct student {
 struct {
 	char name[20];
 	int age;
-}x = { "张三",19 };
+}z = { "张三",19 };
+struct {
+	char name[20];
+	int age;
+	struct {
+		char name[20];
+		int age;
+	}y;
+}x = { "张三",19 ,{"李四",20} };
 // 利用typedef关键字将结构体类型重命名为S
 typedef struct {
 	char name[20];
@@ -41,6 +49,32 @@ struct Z {
 	int z;// 4字节
 };
 #pragma pack()
+struct test {
+	int data[1000];
+	char c;
+};
+void Test1(struct test t) {
+	for (int i = 0; i < 1000; i++) {
+		if (t.data[i] < 60) {
+			t.data[i] = 60;
+		}
+	}
+	for (int i = 0; i < 5; i++) {
+		printf("%d ", t.data[i]);
+	}
+	printf("%c\n", t.c);
+}
+void Test2(struct test* p) {
+	for (int i = 0; i < 1000; i++) {
+		if (p->data[i] < 60) {
+			p->data[i] = 60;
+		}
+	}
+	for (int i = 0; i < 5; i++) {
+		printf("%d ", p->data[i]);
+	}
+	printf("%c\n", p->c);
+}
 struct A {
 	int a;
 	int b;
@@ -51,7 +85,7 @@ struct B {
 	int a : 5;
 	int b : 10;
 	int : 0;
-	// :0表示强制换行，会清空当前的剩余位，下个位段成员将将分配到新的存储单元
+	// :0表示强制换行，会清空当前的剩余位，下个位段成员将被分配到新的存储单元
 	int c : 15;
 	int d : 20;
 };
@@ -60,6 +94,43 @@ struct C {
 	char b : 3;
 	char c : 4;
 	char d : 5;
+};
+struct S {
+	char c;
+	int n;
+};
+union U {
+	char c;
+	int n;
+};
+struct goods {
+	// 通用属性
+	char name[20];
+	double price;
+	int num;
+	// 特有属性
+	union {
+		// book
+		struct {
+			char author[20];
+			int page;
+		};
+		// cup
+		struct {
+			char color[5];
+			int size;
+		};
+	};
+};
+union Test {
+	int n;
+	char c;
+};
+//#define red 3
+enum color {
+	red = 5,
+	green = 2,
+	blue = 7
 };
 
 int main() {
@@ -80,10 +151,12 @@ int main() {
 	printf("%s %d\n", y.name, y.age);
 	printf("%s %d\n", x.name, x.age);
 	// 匿名结构体类型只能使用一次，不能再定义其他变量
+	printf("%s %d %s %d\n", x.name, x.age, x.y.name, x.y.age);
+	// 匿名结构体允许嵌套匿名结构体，但也只能使用一次，不能再定义其他变量
 	S s2 = { "王五", 21 };
 	printf("%s %d\n", s2.name, s2.age);
 	// 但对于typedef重命名的结构体类型，可以定义多个变量
-	p = &x;
+	p = &z;
 	printf("%s %d\n", p->name, p->age);
 	// 两个匿名结构体类型的成员变量即便完全相同，也会被编译器认为是不同的类型
 
@@ -105,6 +178,12 @@ int main() {
 	// #pragma pack(n)指令，用于设置结构体的内存对齐方式，n表示对齐的字节数
 	printf("%zu\n", sizeof(struct Z));
 
+	// 结构体的传值调用与传址调用
+	struct test t1 = { { 62,47,52,78,59 }, 'A' };
+	Test1(t1);
+	struct test* p1 = &t1;
+	Test2(p1);
+
 	// 位段与结构体的区别
 	printf("%zu\n", sizeof(struct A));
 	printf("%zu\n", sizeof(struct B));
@@ -125,6 +204,35 @@ int main() {
 	scanf("%d", &a);
 	c2.a = a;
 	// 借助中间变量就可以正常给位段成员赋值
+
+	// 结构体
+	struct S s1 = { 'A', 100 };
+	// 联合体
+	union U u1 = { 0 };
+	u1.n = 0x11223344;
+	u1.c = 0x55;
+	printf("%zu\n", sizeof(s1));// 8
+	printf("%zu\n", sizeof(u1));// 4
+	printf("%p\n", &u1);
+	printf("%p\n", &u1.c);
+	printf("%p\n", &u1.n);
+
+	// 联合体的使用
+	union Test t1 = { 0 };
+	t1.n = 1;
+	if (t1.c == 1) {
+		printf("小端\n");
+	}
+	else {
+		printf("大端\n");
+	}
+
+	// 枚举类型
+	enum color c1 = green;
+	printf("%d\n", c1);
+	printf("%d\n", red);
+	printf("%d\n", green);
+	printf("%d\n", blue);
 
 	return 0;
 }
