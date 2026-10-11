@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="1.c" />
     <ClCompile Include="10.c" />
+    <ClCompile Include="11.c" />
     <ClCompile Include="2.c" />
     <ClCompile Include="2_2.c" />
     <ClCompile Include="3.c" />
@@ -153,6 +154,9 @@
   <ItemGroup>
     <ClInclude Include="clean.h" />
     <ClInclude Include="game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

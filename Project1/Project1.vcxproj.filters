@@ -81,6 +81,9 @@
     <ClCompile Include="10.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="11.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -89,5 +92,10 @@
     <ClInclude Include="clean.h">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test.txt">
+      <Filter>源文件</Filter>
+    </Text>
   </ItemGroup>
 </Project>
