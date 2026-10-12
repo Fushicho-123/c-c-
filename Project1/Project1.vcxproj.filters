@@ -84,12 +84,21 @@
     <ClCompile Include="11.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="12.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="add.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="clean.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="add.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
