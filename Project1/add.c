@@ -1,5 +1,5 @@
-#include "add.h"
-int add(int x, int y)
+#include "ADD.h"
+int ADD(int x, int y)
 {
 	return x + y;
 }
